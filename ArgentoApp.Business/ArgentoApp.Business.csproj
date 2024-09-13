@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+<ItemGroup>
+  <ProjectReference Include="../ArgentoApp.Data/ArgentoApp.Data.csproj" />
+  <ProjectReference Include="../ArgentoApp.Shared/ArgentoApp.Shared.csproj" />
+</ItemGroup>
+
+</Project>

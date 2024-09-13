@@ -1,0 +1,6 @@
+@ArgentoApp.API_HostAddress = http://localhost:5057
+
+GET {{ArgentoApp.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

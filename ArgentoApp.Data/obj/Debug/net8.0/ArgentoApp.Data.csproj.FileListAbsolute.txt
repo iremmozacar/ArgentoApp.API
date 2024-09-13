@@ -1,0 +1,17 @@
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/bin/Debug/net8.0/ArgentoApp.Data.deps.json
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/bin/Debug/net8.0/ArgentoApp.Data.dll
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/bin/Debug/net8.0/ArgentoApp.Data.pdb
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/bin/Debug/net8.0/ArgentoApp.Entity.dll
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/bin/Debug/net8.0/ArgentoApp.Shared.dll
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/bin/Debug/net8.0/ArgentoApp.Entity.pdb
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/bin/Debug/net8.0/ArgentoApp.Shared.pdb
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/obj/Debug/net8.0/ArgentoApp.Data.csproj.AssemblyReference.cache
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/obj/Debug/net8.0/ArgentoApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/obj/Debug/net8.0/ArgentoApp.Data.AssemblyInfoInputs.cache
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/obj/Debug/net8.0/ArgentoApp.Data.AssemblyInfo.cs
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/obj/Debug/net8.0/ArgentoApp.Data.csproj.CoreCompileInputs.cache
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/obj/Debug/net8.0/ArgentoA.796E8357.Up2Date
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/obj/Debug/net8.0/ArgentoApp.Data.dll
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/obj/Debug/net8.0/refint/ArgentoApp.Data.dll
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/obj/Debug/net8.0/ArgentoApp.Data.pdb
+/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Data/obj/Debug/net8.0/ref/ArgentoApp.Data.dll

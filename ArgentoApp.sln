@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgentoApp.Shared", "ArgentoApp.Shared\ArgentoApp.Shared.csproj", "{A02B636C-FCA6-4515-BCEA-AEA8BAF6C3A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgentoApp.Entity", "ArgentoApp.Entity\ArgentoApp.Entity.csproj", "{66B64739-D6A0-4F7D-AFDC-4C88C9784A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgentoApp.Data", "ArgentoApp.Data\ArgentoApp.Data.csproj", "{ECDD689D-815C-4F8D-A191-5ECA6336EB21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgentoApp.Business", "ArgentoApp.Business\ArgentoApp.Business.csproj", "{A68310AA-0518-4E1A-91A7-BF4862EBA8FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgentoApp.API", "ArgentoApp.API\ArgentoApp.API.csproj", "{26DAA80A-2354-432E-A3DE-2EF5395AA4A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A02B636C-FCA6-4515-BCEA-AEA8BAF6C3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A02B636C-FCA6-4515-BCEA-AEA8BAF6C3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A02B636C-FCA6-4515-BCEA-AEA8BAF6C3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A02B636C-FCA6-4515-BCEA-AEA8BAF6C3A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B64739-D6A0-4F7D-AFDC-4C88C9784A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B64739-D6A0-4F7D-AFDC-4C88C9784A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B64739-D6A0-4F7D-AFDC-4C88C9784A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B64739-D6A0-4F7D-AFDC-4C88C9784A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECDD689D-815C-4F8D-A191-5ECA6336EB21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECDD689D-815C-4F8D-A191-5ECA6336EB21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECDD689D-815C-4F8D-A191-5ECA6336EB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECDD689D-815C-4F8D-A191-5ECA6336EB21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A68310AA-0518-4E1A-91A7-BF4862EBA8FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68310AA-0518-4E1A-91A7-BF4862EBA8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68310AA-0518-4E1A-91A7-BF4862EBA8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68310AA-0518-4E1A-91A7-BF4862EBA8FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26DAA80A-2354-432E-A3DE-2EF5395AA4A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26DAA80A-2354-432E-A3DE-2EF5395AA4A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26DAA80A-2354-432E-A3DE-2EF5395AA4A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26DAA80A-2354-432E-A3DE-2EF5395AA4A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
