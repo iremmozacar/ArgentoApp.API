@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Shared/ArgentoApp.Shared.csproj",
+      "projectUniqueName": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/ArgentoApp.Shared.csproj",
       "projectName": "ArgentoApp.Shared",
-      "projectPath": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Shared/ArgentoApp.Shared.csproj",
+      "projectPath": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/ArgentoApp.Shared.csproj",
       "packagesPath": "/Users/iremozacar/.nuget/packages/",
-      "outputPath": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Shared/obj/",
+      "outputPath": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/iremozacar/.nuget/NuGet/NuGet.Config"

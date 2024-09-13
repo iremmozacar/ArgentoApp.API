@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Entity/ArgentoApp.Entity.csproj",
+      "projectUniqueName": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Entity/ArgentoApp.Entity.csproj",
       "projectName": "ArgentoApp.Entity",
-      "projectPath": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Entity/ArgentoApp.Entity.csproj",
+      "projectPath": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Entity/ArgentoApp.Entity.csproj",
       "packagesPath": "/Users/iremozacar/.nuget/packages/",
-      "outputPath": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Entity/obj/",
+      "outputPath": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Entity/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/iremozacar/.nuget/NuGet/NuGet.Config"
@@ -52,8 +52,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Shared/ArgentoApp.Shared.csproj": {
-              "projectPath": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Shared/ArgentoApp.Shared.csproj"
+            "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/ArgentoApp.Shared.csproj": {
+              "projectPath": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/ArgentoApp.Shared.csproj"
             }
           }
         }

@@ -3069,11 +3069,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.API/ArgentoApp.API.csproj",
+      "projectUniqueName": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/ArgentoApp.API.csproj",
       "projectName": "ArgentoApp.API",
-      "projectPath": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.API/ArgentoApp.API.csproj",
+      "projectPath": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/ArgentoApp.API.csproj",
       "packagesPath": "/Users/iremozacar/.nuget/packages/",
-      "outputPath": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.API/obj/",
+      "outputPath": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/iremozacar/.nuget/NuGet/NuGet.Config"
@@ -3089,11 +3089,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Business/ArgentoApp.Business.csproj": {
-              "projectPath": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Business/ArgentoApp.Business.csproj"
+            "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Business/ArgentoApp.Business.csproj": {
+              "projectPath": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Business/ArgentoApp.Business.csproj"
             },
-            "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Shared/ArgentoApp.Shared.csproj": {
-              "projectPath": "/Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Shared/ArgentoApp.Shared.csproj"
+            "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/ArgentoApp.Shared.csproj": {
+              "projectPath": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/ArgentoApp.Shared.csproj"
             }
           }
         }
