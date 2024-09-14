@@ -9,3 +9,15 @@
 /Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Shared/obj/Debug/net8.0/refint/ArgentoApp.Shared.dll
 /Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Shared/obj/Debug/net8.0/ArgentoApp.Shared.pdb
 /Users/iremozacar/Documents/ArgentoApp/ArgentoApp.Shared/obj/Debug/net8.0/ref/ArgentoApp.Shared.dll
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/bin/Debug/net8.0/ArgentoApp.Shared.deps.json
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/bin/Debug/net8.0/ArgentoApp.Shared.dll
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/bin/Debug/net8.0/ArgentoApp.Shared.pdb
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/obj/Debug/net8.0/ArgentoApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/obj/Debug/net8.0/ArgentoApp.Shared.AssemblyInfoInputs.cache
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/obj/Debug/net8.0/ArgentoApp.Shared.AssemblyInfo.cs
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/obj/Debug/net8.0/ArgentoApp.Shared.csproj.CoreCompileInputs.cache
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/obj/Debug/net8.0/ArgentoApp.Shared.sourcelink.json
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/obj/Debug/net8.0/ArgentoApp.Shared.dll
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/obj/Debug/net8.0/refint/ArgentoApp.Shared.dll
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/obj/Debug/net8.0/ArgentoApp.Shared.pdb
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Shared/obj/Debug/net8.0/ref/ArgentoApp.Shared.dll

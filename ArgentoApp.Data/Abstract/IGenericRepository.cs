@@ -1,4 +1,8 @@
+#nullable enable
+
 using System;
+using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace ArgentoApp.Data.Abstact;
 
@@ -8,8 +12,11 @@ public interface IGenericRepository<TEntity> where TEntity : class
 
     Task UpdateAsync(TEntity entity);
     Task DeleteAsync(TEntity entity);
-    Task <TEntity> GetbyIdAsync(int id);
-    Task <List<TEntity>> GetAllAsync(int id);
-    Task  <int> GetCountAsync(int id);
+    Task <TEntity> GetbyIdAsync( Expression<Func<TEntity, bool>>? options=null,
+            Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? predicate=null);
+    Task <List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>>? options=null,
+            Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? predicate=null);
+    Task  <int> GetCountAsync(Expression<Func<TEntity, bool>>? options=null,
+            Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? predicate=null);
 
 }

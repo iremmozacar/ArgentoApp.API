@@ -22,5 +22,8 @@
   <ProjectReference Include="../ArgentoApp.Business/ArgentoApp.Business.csproj" />
   <ProjectReference Include="../ArgentoApp.Shared/ArgentoApp.Shared.csproj" />
 </ItemGroup>
+<ItemGroup>
+  <Folder Include="wwwroot/" />
+</ItemGroup>
 
 </Project>

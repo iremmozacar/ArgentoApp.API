@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "uOOqPX+9ZyyvW/CrkQOcIkJqUCcgb3YzE14S9X6s5mc=",
+  "Hash": "l9Bn1BR0DFND3OlL8KtPP5Pc2DhBICrMtiA/IuW82y0=",
   "Source": "ArgentoApp.API",
   "BasePath": "_content/ArgentoApp.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ArgentoApp.API/wwwroot",
+      "Source": "ArgentoApp.API",
+      "ContentRoot": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/",
+      "BasePath": "_content/ArgentoApp.API",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

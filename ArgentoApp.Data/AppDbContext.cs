@@ -1,4 +1,5 @@
 using System;
+using ArgentoApp.Data.Concrete.Configs;
 using ArgentoApp.Entity.Concrete;
 using ArgentoApp.Entity.Concrete.Abstact;
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +17,7 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-       
+       modelBuilder.ApplyConfigurationsFromAssembly(typeof(CategoryConfig).Assembly);
         base.OnModelCreating(modelBuilder);
     }
 }

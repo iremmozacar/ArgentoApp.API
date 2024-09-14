@@ -41,7 +41,7 @@ namespace ArgentoApp.Data.Concrete.Configs
                 {
                Id=2,
               Name="Turuncu Kalsit",
-              Price=100,
+              Price=200,
               Properties="Turuncu Kalsit",
               Url= "Kalsit",
               ImageUrl="",
@@ -55,7 +55,7 @@ namespace ArgentoApp.Data.Concrete.Configs
                 {
                Id=3,
               Name="Kaplan Gözü ",
-              Price=100,
+              Price=300,
               Properties="Kaplan Gözü",
               Url= "KaplanGozu",
               ImageUrl="",
@@ -69,7 +69,7 @@ namespace ArgentoApp.Data.Concrete.Configs
                 {
                Id=4,
               Name="Moldavit",
-              Price=100,
+              Price=400,
               Properties="Moldavit",
               Url= "Moldavit",
               ImageUrl="",
@@ -83,7 +83,7 @@ namespace ArgentoApp.Data.Concrete.Configs
                 {
                Id=5,
               Name="Larimar",
-              Price=100,
+              Price=500,
               Properties="Larimar",
               Url= "Larimar",
               ImageUrl="",
@@ -97,7 +97,7 @@ namespace ArgentoApp.Data.Concrete.Configs
                 {
                Id=6,
               Name="Sodalit",
-              Price=100,
+              Price=600,
               Properties="Sodalit",
               Url= "Sodalit",
               ImageUrl="",
@@ -111,7 +111,7 @@ namespace ArgentoApp.Data.Concrete.Configs
                 {
                Id=7,
               Name="Kristal Kuvars",
-              Price=100,
+              Price=700,
               Properties="Kristal Kuvars",
               Url= "KristalKuvars",
               ImageUrl="",

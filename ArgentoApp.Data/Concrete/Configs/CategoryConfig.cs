@@ -50,7 +50,7 @@ namespace ArgentoApp.Data.Concrete.Configs
             new()
             {
               Id=3,
-              Name=" 3. Solar Pleksus Çakra(Manipura Çakra)",
+              Name="3. Solar Pleksus Çakra(Manipura Çakra)",
               Description="Solar Plexus çakra ile uyumlu taşlar burada. Sarı renk ile ifade edilir.",
               IsActive=true,
               Url= "SolarPlexus",
@@ -58,7 +58,7 @@ namespace ArgentoApp.Data.Concrete.Configs
              new()
             {
               Id=4,
-              Name="Kalp Çakrası (Anahata Çakra)",
+              Name="4.Kalp Çakrası (Anahata Çakra)",
               Description="Kalp çakrası ile uyumlu taşlar burada. Yeşil renk ile ifade edilir.",
               IsActive=true,
               Url= "Kalp",
@@ -82,7 +82,7 @@ namespace ArgentoApp.Data.Concrete.Configs
              new()
             {
               Id=7,
-              Name="7. Taç Çakra (Sahasrara Çakra)",
+              Name="7.Taç Çakra (Sahasrara Çakra)",
               Description="Taç çakra ile uyumlu taşlar burada. Menekşe rengi ile ifade edilir.",
               IsActive=true,
               Url= "Taç",
