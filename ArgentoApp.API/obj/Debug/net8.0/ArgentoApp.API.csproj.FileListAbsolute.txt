@@ -272,3 +272,5 @@
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/obj/Debug/net8.0/ArgentoApp.API.genruntimeconfig.cache
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/obj/Debug/net8.0/ref/ArgentoApp.API.dll
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/ArgentoApp.API.staticwebassets.runtime.json
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/AutoMapper.dll
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

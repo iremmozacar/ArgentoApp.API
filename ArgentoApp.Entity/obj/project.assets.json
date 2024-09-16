@@ -10,7 +10,10 @@
         },
         "runtime": {
           "bin/placeholder/ArgentoApp.Shared.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

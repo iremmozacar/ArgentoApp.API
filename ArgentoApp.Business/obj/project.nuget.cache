@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MV9XRxJ3Dg0=",
+  "dgSpecHash": "hJe5lRUGje4=",
   "success": true,
   "projectFilePath": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.Business/ArgentoApp.Business.csproj",
   "expectedPackageFiles": [
+    "/Users/iremozacar/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/iremozacar/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/Users/iremozacar/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/iremozacar/.nuget/packages/microsoft.data.sqlite.core/8.0.8/microsoft.data.sqlite.core.8.0.8.nupkg.sha512",
     "/Users/iremozacar/.nuget/packages/microsoft.entityframeworkcore/8.0.8/microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "/Users/iremozacar/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.8/microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",

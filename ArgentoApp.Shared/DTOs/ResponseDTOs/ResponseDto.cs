@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace ArgentoApp.Shared.DTOs.ResponseDTOs;
 
@@ -6,26 +7,38 @@ public class ResponseDto<T>
 {
 public T Data { get; set; }
 public string Error { get; set; }   
+[JsonIgnore]
 public int StatusCode { get; set; } 
 public bool IsSucceeded { get; set; }   
 
 
-public static ResponseDto<T> Success (T data, int StatusCode)
+public static ResponseDto<T> Success (T data, int statusCode)
 {
         return new ResponseDto<T>
         {
             Data = data,
-            StatusCode = StatusCode,
+            StatusCode = statusCode,
             IsSucceeded = true
         };
 }
-    public static ResponseDto<T> Success(int StatusCode)
+
+    public static ResponseDto<T> Success(int statusCode)
     {
         return new ResponseDto<T>
         {
-        Data = default(T),
-        StatusCode = StatusCode,
-        IsSucceeded = true
+            Data = default(T), 
+            StatusCode = statusCode,
+            IsSucceeded = true
+        };
+    }
+
+
+    public static ResponseDto<T> Fail (string error, int statusCode){
+
+        return new ResponseDto<T>{
+            Error=error,
+            StatusCode=statusCode,
+            IsSucceeded=false
         };
     }
 }
