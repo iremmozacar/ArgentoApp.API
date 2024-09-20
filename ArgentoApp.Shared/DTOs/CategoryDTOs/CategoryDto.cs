@@ -1,6 +1,6 @@
 using System;
 
-namespace ArgentoApp.Shared.DTOs.CategoryDto;
+namespace ArgentoApp.Shared.DTOs.Categories;
 
 public class CategoryDto
 {

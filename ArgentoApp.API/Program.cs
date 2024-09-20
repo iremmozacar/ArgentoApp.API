@@ -1,4 +1,7 @@
+using ArgentoApp.Business.Abstract;
+using ArgentoApp.Business.Concrete;
 using ArgentoApp.Data;
+using ArgentoApp.Data.Abstact;
 using ArgentoApp.Data.Concrete.Repositories;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore; 
@@ -13,7 +16,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
 
+//<<<Repositories>>>
 builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
+builder.Services.AddScoped<IProductRepository,ProductRepository>();
+
+//<<<Services>>>>
+builder.Services.AddScoped<IProductService,ProductService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

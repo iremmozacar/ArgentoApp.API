@@ -49,33 +49,75 @@ public class CategoryService : ICategoryService
         return ResponseDto<NoContent>.Success(200);
     }
 
-    public async Task<ResponseDto<CategoryDto>> GetActivesAsync(bool IsActive = true)
+    public async Task<ResponseDto<List<CategoryDto>>> GetActivesAsync(bool IsActive = true)
     {
-        throw new NotImplementedException();
+        var categoryList = await _categoryRepository.GetAllAsync();
+        string statusText= IsActive ? "aktif" : "pasif";
+        if (categoryList.Count == 0){
+            return ResponseDto<List<CategoryDto>>.Fail($"Hiç {statusText} kategori bulunamadı!",404);
+        }
+        var categoryDtoList = _mapper.Map<List<CategoryDto>>(categoryList);
+        return ResponseDto<List<CategoryDto>>.Success(categoryDtoList,200);
     }
 
-    public Task<ResponseDto<int>> GetActivesCountAsync(bool IsActive = true)
+    public async Task<ResponseDto<int>> GetActivesCountAsync(bool IsActive = true)
     {
-        throw new NotImplementedException();
+        var categoryList = await _categoryRepository.GetAllAsync(x=>x.IsActive==IsActive);
+        int count=categoryList.Count;
+        string statusText = IsActive ? "aktif " : "pasif";
+        if (count ==0){
+            return ResponseDto<int>.Fail($"Hiç {statusText} kategori yok!", 404);
+        }
+        return ResponseDto<int>.Success(count,200);
     }
 
-    public Task<ResponseDto<List<CategoryDto>>> GetAllAsync()
+    public async Task<ResponseDto<List<CategoryDto>>> GetAllAsync()
     {
-        throw new NotImplementedException();
+       var categoryList = await _categoryRepository.GetAllAsync();
+       
+       if (categoryList.Count ==0){
+        return ResponseDto<List<CategoryDto>>.Fail($"Hiç kategori bulunamadı",404);
+    
+       }
+       var categoryDtoList = _mapper.Map<List<CategoryDto>>(categoryList);
+       return ResponseDto<List<CategoryDto>>.Success(categoryDtoList,200);
+
     }
 
-    public Task<ResponseDto<CategoryDto>> GetByIdAsync(int id)
+    public async Task<ResponseDto<CategoryDto>> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        var category = await _categoryRepository.GetAllAsync(x=>x.Id==id);
+         if (category==null){
+            return ResponseDto<CategoryDto>.Fail($"{id}'li kategori bulunamadı",404);       
+         }
+         var categoryDto= _mapper.Map<CategoryDto>(category);
+         return ResponseDto<CategoryDto>.Success(categoryDto,200);
     }
 
-    public Task<ResponseDto<int>> GetCountAsync()
+    public async Task<ResponseDto<int>> GetCountAsync()
     {
-        throw new NotImplementedException();
+        int count = await _categoryRepository.GetCountAsync();
+        if (count==0){
+            return ResponseDto<int>.Fail("Hiç kategori yok!",404);
+        }
+        return ResponseDto<int>.Success(count,200);
+        
     }
 
-    public Task<ResponseDto<CategoryDto>> UpdateAsync(CategoryUpdateDto categoryUpdateDto)
+    public async Task<ResponseDto<CategoryDto>> UpdateAsync(CategoryUpdateDto categoryUpdateDto)
     {
-        throw new NotImplementedException();
+        var category = await _categoryRepository.GetbyIdAsync(x=>x.Id==categoryUpdateDto.Id);
+        if (category==null){
+            return ResponseDto<CategoryDto>.Fail("Böyle bir kategori bulunamadı!",404);
+
+        }
+        category = _mapper.Map<Category>(categoryUpdateDto);
+        category.ModifiedDate=DateTime.Now;
+        category.Url = CustomUrlHelper.GetUrl(categoryUpdateDto.Name);
+        await _categoryRepository.UpdateAsync(category);
+        var categoryDto = _mapper.Map<CategoryDto>(category);
+        return ResponseDto<CategoryDto>.Success(categoryDto,200); 
     }
+
+
 }

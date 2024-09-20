@@ -60,7 +60,7 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
             query = query.Where(options);
              
         }
-        return await query.SingleOrDefaultAsync();
+        return await query.AsNoTracking().SingleOrDefaultAsync();
     }
 
     public async Task<int> GetCountAsync(Expression<Func<TEntity, bool>> options = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> predicate = null)
