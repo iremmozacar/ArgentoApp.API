@@ -9,6 +9,7 @@ using ArgentoApp.Data;
 using ArgentoApp.Data.Abstact;
 using ArgentoApp.Data.Concrete.Repositories;
 using ArgentoApp.Entity.Concrete.Abstact;
+using ArgentoApp.Shared.DTOs.Categories;
 using ArgentoApp.Shared.DTOs.CategoryDTOs;
 using ArgentoApp.Shared.DTOs.ProductDTOs;
 using ArgentoApp.Shared.DTOs.ResponseDTOs;
@@ -42,6 +43,7 @@ public class ProductService : IProductService
             return ResponseDto<ProductDto>.Fail("Bir hata oluştu!", 400);
         }
         ProductDto createdProductDto = _mapper.Map<ProductDto>(createdProduct);
+        createdProductDto.Category=_mapper.Map<CategoryDto>(await _categoryRepository.GetbyIdAsync(x=>x.Id==productCreateDto.CategoryId));
         return ResponseDto<ProductDto>.Success(createdProductDto, 201);
     }
 
@@ -50,7 +52,7 @@ public class ProductService : IProductService
         Product product = await _productRepository.GetbyIdAsync(x => x.Id == id);
         if (product == null)
         {
-            return ResponseDto<NoContent>.Fail("$ {id} id'li ürün bulunamadı", 404);
+            return ResponseDto<NoContent>.Fail("${id} id'li ürün bulunamadı", 404);
         }
         await _productRepository.DeleteAsync(product);
         return ResponseDto<NoContent>.Success(200);
@@ -59,10 +61,10 @@ public class ProductService : IProductService
     async Task<ResponseDto<List<ProductDto>>> IProductService.GetActivesAsync(bool isActive)
     {
         List<Product> productList = await _productRepository.GetAllAsync(x => x.IsActive == isActive);
-        string statusText = isActive ? "aktif " : "pasif";
+        string statusText = isActive ? "Aktif " : "Pasif";
         if (productList.Count == 0)
         {
-            return ResponseDto<List<ProductDto>>.Fail($" Hiç {statusText} ürün bulunamadı!", 404);
+            return ResponseDto<List<ProductDto>>.Fail($"{statusText} ürün bulunamadı!", 404);
 
         }
         List<ProductDto> productDtoList = _mapper.Map<List<ProductDto>>(productList);
@@ -72,10 +74,10 @@ public class ProductService : IProductService
     public async Task<ResponseDto<int>> GetActivesCountAsync(bool isActive = true)
     {
         int count = await _productRepository.GetCountAsync(x => x.IsActive == isActive, x => x.Include(y => y.Category));
-        string statusText = isActive ? "aktif" : "pasif";
+        string statusText = isActive ? "Aktif" : "Pasif";
         if (count == 0)
         {
-            return ResponseDto<int>.Fail($" {statusText} ürün yok!", 404);
+            return ResponseDto<int>.Fail($"{statusText} ürün bulunamadı!", 404);
         }
         return ResponseDto<int>.Success(count, 200);
     }
@@ -86,7 +88,7 @@ public class ProductService : IProductService
 
         if (productList.Count == 0)
         {
-            return ResponseDto<List<ProductDto>>.Fail($" Hiç ürün bulunamadı!", 404);
+            return ResponseDto<List<ProductDto>>.Fail($"Ürün bulunamadı!", 404);
 
         }
         List<ProductDto> productDtoList = _mapper.Map<List<ProductDto>>(productList);
@@ -97,11 +99,15 @@ public class ProductService : IProductService
     {
         List<Product> productList = await _productRepository.GetAllAsync(x => x.IsActive == true && x.CategoryId == categoryId, x => x.Include(y => y.Category));
         var category = await _categoryRepository.GetbyIdAsync(x => x.Id == categoryId);
+        if (category == null)
+        {
+            return ResponseDto<List<ProductDto>>.Fail($"Böyle bir kategori bulunamadı!", 404);
+        }
         if (productList.Count == 0)
         {
-            return ResponseDto<List<ProductDto>>.Fail($" {category.Name} kategorisinde ürün bulunamadı!", 404);
-
+            return ResponseDto<List<ProductDto>>.Fail($"{category.Name} kategorisinde ürün bulunamadı!", 404);
         }
+
         List<ProductDto> productDtoList = _mapper.Map<List<ProductDto>>(productList);
         return ResponseDto<List<ProductDto>>.Success(productDtoList, 200);
     }
@@ -112,7 +118,7 @@ public class ProductService : IProductService
 
         if (product == null)
         {
-            return ResponseDto<ProductDto>.Fail($" {id} id'li ürün bulunamadı!", 404);
+            return ResponseDto<ProductDto>.Fail($"{id} id'li bir ürün bulunamadı!", 404);
 
         }
         ProductDto productDto = _mapper.Map<ProductDto>(product);
@@ -132,10 +138,10 @@ public class ProductService : IProductService
     public async Task<ResponseDto<List<ProductDto>>> GetHomeAsync(bool isHome = true)
     {
         List<Product> productList = await _productRepository.GetAllAsync(x => x.IsActive == true && x.IsHome == isHome, x => x.Include(y => y.Category));
-        string statusText = isHome ? "ana sayfa ürünü" : "ana sayfa olmayan ürün";
+        string statusText = isHome ? "Ana sayfa ürünü" : "Ana sayfada olmayan ürün";
         if (productList.Count == 0)
         {
-            return ResponseDto<List<ProductDto>>.Fail($"Hiç {statusText} bulunamadı!", 404);
+            return ResponseDto<List<ProductDto>>.Fail($"{statusText} bulunamadı!", 404);
         }
         List<ProductDto> productDtoListt = _mapper.Map<List<ProductDto>>(productList);
         return ResponseDto<List<ProductDto>>.Success(productDtoListt, 200);
@@ -144,7 +150,7 @@ public class ProductService : IProductService
     public async Task<ResponseDto<int>> GetHomesCountAsync(bool IsHome = true)
     {
         int count = await _productRepository.GetCountAsync(x => x.IsActive == true && x.IsHome == IsHome);
-        string statusText = IsHome ? "Ana sayfa ürünü" : "Ana sayfa olmayan ürün";
+        string statusText = IsHome ? "Ana sayfa ürünü" : "Ana sayfada olmayan ürün";
         if (count == 0)
         {
             return ResponseDto<int>.Fail($"{statusText} bulunamadı!", 404);
@@ -157,7 +163,7 @@ public class ProductService : IProductService
         var product = await _productRepository.GetbyIdAsync(x => x.Id == id);
         if (product == null)
         {
-            return ResponseDto<NoContent>.Fail($" {id} id'li ürün bulunamadı! ", 404);
+            return ResponseDto<NoContent>.Fail($"{id} id'li bir ürün bulunamadı! ", 404);
         }
         product.IsActive = !product.IsActive;
         await _productRepository.UpdateAsync(product);
@@ -169,7 +175,7 @@ public class ProductService : IProductService
         var product = await _productRepository.GetbyIdAsync(x => x.Id == id);
         if (product == null)
         {
-            return ResponseDto<NoContent>.Fail($" {id} id'li ürün bulunamadı!", 404);
+            return ResponseDto<NoContent>.Fail($"{id} id'li ürün bulunamadı!", 404);
         }
         product.IsHome = !product.IsHome;
         product.IsActive = true;
@@ -183,13 +189,14 @@ public class ProductService : IProductService
         var product = await _productRepository.GetbyIdAsync(x => x.Id == productUpdateDto.Id);
         if (product == null)
         {
-            return ResponseDto<ProductDto>.Fail($" {productUpdateDto.Id} id'li ürün bulunamadı!", 404);
+            return ResponseDto<ProductDto>.Fail($"{productUpdateDto.Id} id'li ürün bulunamadı!", 404);
         }
         product = _mapper.Map<Product>(productUpdateDto);
         product.ModifiedDate = DateTime.Now;
         product.Url = CustomUrlHelper.GetUrl(productUpdateDto.Name);
         await _productRepository.UpdateAsync(product);
         var productDto = _mapper.Map<ProductDto>(product);
+        productDto.Category = _mapper.Map<CategoryDto>(await _categoryRepository.GetbyIdAsync(x => x.Id == productDto.CategoryId));
         return ResponseDto<ProductDto>.Success(productDto, 200);
     }
 }

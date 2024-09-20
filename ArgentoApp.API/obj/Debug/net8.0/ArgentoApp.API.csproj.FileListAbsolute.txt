@@ -136,11 +136,14 @@
 /Users/iremozacar/Documents/ArgentoApp/ArgentoApp.API/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/appsettings.Development.json
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/appsettings.json
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/ArgentoApp.API.staticwebassets.runtime.json
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/ArgentoApp.API
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/ArgentoApp.API.deps.json
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/ArgentoApp.API.runtimeconfig.json
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/ArgentoApp.API.dll
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/ArgentoApp.API.pdb
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/AutoMapper.dll
+/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/Humanizer.dll
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/Microsoft.CodeAnalysis.dll
@@ -271,6 +274,3 @@
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/obj/Debug/net8.0/ArgentoApp.API.pdb
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/obj/Debug/net8.0/ArgentoApp.API.genruntimeconfig.cache
 /Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/obj/Debug/net8.0/ref/ArgentoApp.API.dll
-/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/ArgentoApp.API.staticwebassets.runtime.json
-/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/AutoMapper.dll
-/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

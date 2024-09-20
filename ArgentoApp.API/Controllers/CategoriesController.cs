@@ -2,6 +2,7 @@ using System;
 using System.Reflection.Metadata.Ecma335;
 using ArgentoApp.Business.Abstract;
 using ArgentoApp.Shared.DTOs;
+using ArgentoApp.Shared.DTOs.Categories;
 using ArgentoApp.Shared.DTOs.CategoryDto;
 using ArgentoApp.Shared.Helpers;
 using Microsoft.AspNetCore.Mvc;
@@ -66,6 +67,6 @@ public class CategoriesController : CustomControllerBase
     var response = await _categoryService.GetAllAsync();
     return CreateActionResult(response);
   }
- 
+
 
 }

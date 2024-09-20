@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/images/Categories/ad5e068a-ab2d-41ef-add9-a80b4c1a5242.jpg",
+      "PackagePath": "staticwebassets/images/Categories/ad5e068a-ab2d-41ef-add9-a80b4c1a5242.jpg"
+    },
+    {
+      "Id": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/images/General/6f1231c8-594e-433b-97f4-357b7e657101.jpg",
+      "PackagePath": "staticwebassets/images/General/6f1231c8-594e-433b-97f4-357b7e657101.jpg"
+    },
+    {
+      "Id": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/images/Products/7aeb3a66-c631-42f6-aa6d-5f353f528b0d.jpg",
+      "PackagePath": "staticwebassets/images/Products/7aeb3a66-c631-42f6-aa6d-5f353f528b0d.jpg"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.ArgentoApp.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.ArgentoApp.API.props",
+      "PackagePath": "build\\ArgentoApp.API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.ArgentoApp.API.props",
+      "PackagePath": "buildMultiTargeting\\ArgentoApp.API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.ArgentoApp.API.props",
+      "PackagePath": "buildTransitive\\ArgentoApp.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

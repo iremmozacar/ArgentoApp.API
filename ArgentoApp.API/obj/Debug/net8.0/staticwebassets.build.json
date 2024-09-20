@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l9Bn1BR0DFND3OlL8KtPP5Pc2DhBICrMtiA/IuW82y0=",
+  "Hash": "3CA0Y0/xsNn3uj6KFUXZkyExrulDaQ0FvJ3a3MheVhM=",
   "Source": "ArgentoApp.API",
   "BasePath": "_content/ArgentoApp.API",
   "Mode": "Default",
@@ -15,5 +15,63 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/images/Categories/ad5e068a-ab2d-41ef-add9-a80b4c1a5242.jpg",
+      "SourceId": "ArgentoApp.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/",
+      "BasePath": "_content/ArgentoApp.API",
+      "RelativePath": "images/Categories/ad5e068a-ab2d-41ef-add9-a80b4c1a5242.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/Categories/ad5e068a-ab2d-41ef-add9-a80b4c1a5242.jpg"
+    },
+    {
+      "Identity": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/images/General/6f1231c8-594e-433b-97f4-357b7e657101.jpg",
+      "SourceId": "ArgentoApp.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/",
+      "BasePath": "_content/ArgentoApp.API",
+      "RelativePath": "images/General/6f1231c8-594e-433b-97f4-357b7e657101.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/General/6f1231c8-594e-433b-97f4-357b7e657101.jpg"
+    },
+    {
+      "Identity": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/images/Products/7aeb3a66-c631-42f6-aa6d-5f353f528b0d.jpg",
+      "SourceId": "ArgentoApp.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/",
+      "BasePath": "_content/ArgentoApp.API",
+      "RelativePath": "images/Products/7aeb3a66-c631-42f6-aa6d-5f353f528b0d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/Products/7aeb3a66-c631-42f6-aa6d-5f353f528b0d.jpg"
+    }
+  ]
 }
