@@ -26,22 +26,24 @@ public class CategoryService : ICategoryService
 
     public async Task<ResponseDto<CategoryDto>> CreateAsync(CategoryCreateDto categoryCreateDto)
     {
-           string url = CustomUrlHelper.GetUrl(categoryCreateDto.Name);
-           Category category=_mapper.Map<Category>(categoryCreateDto);
-         var createdCategory= await _categoryRepository.CreateAsync(category);
-         if(createdCategory==null){
+        string url = CustomUrlHelper.GetUrl(categoryCreateDto.Name);
+        Category category = _mapper.Map<Category>(categoryCreateDto);
+        var createdCategory = await _categoryRepository.CreateAsync(category);
+        if (createdCategory == null)
+        {
             return ResponseDto<CategoryDto>.Fail("Bir hata oluştu", StatusCodes.Status400BadRequest);
-         }
-         CategoryDto categoryDto=_mapper.Map<CategoryDto>(createdCategory);
-         return ResponseDto<CategoryDto>.Success(categoryDto, StatusCodes.Status201Created);
-         
+        }
+        CategoryDto categoryDto = _mapper.Map<CategoryDto>(createdCategory);
+        return ResponseDto<CategoryDto>.Success(categoryDto, StatusCodes.Status201Created);
+
     }
 
     public async Task<ResponseDto<NoContent>> DeleteAsync(int id)
     {
-        var category = await _categoryRepository.GetbyIdAsync(x=>x.Id==id);
-        if (category==null){
-            return ResponseDto<NoContent>.Fail($"{id} id'li kategori bulunamadı!",404);
+        var category = await _categoryRepository.GetbyIdAsync(x => x.Id == id);
+        if (category == null)
+        {
+            return ResponseDto<NoContent>.Fail($"{id} id'li kategori bulunamadı!", 404);
         }
         await _categoryRepository.DeleteAsync(category);
         return ResponseDto<NoContent>.Success(200);
