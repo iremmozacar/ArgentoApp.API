@@ -49,7 +49,11 @@ public class CartItemService : ICartItemService
     public async Task<ResponseDto<int>> CountAsync(int CartId)
     {
         var count = await _cartItemRepository.GetCountAsync(x=>x.CartId==CartId);
-        return ResponseDto<int>.Success(count);
+        if (count == 0)
+        {
+            return ResponseDto<int>.Fail("Sepet bulunamadı.", 404);
+        }
+        return ResponseDto<int>.Success(count,200);
     }
 
     public async Task<ResponseDto<NoContent>> DeleteCartItemAsync(int cartItemId)
