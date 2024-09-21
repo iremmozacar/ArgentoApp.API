@@ -43,13 +43,13 @@ public class ProductService : IProductService
             return ResponseDto<ProductDto>.Fail("Bir hata oluştu!", 400);
         }
         ProductDto createdProductDto = _mapper.Map<ProductDto>(createdProduct);
-        createdProductDto.Category=_mapper.Map<CategoryDto>(await _categoryRepository.GetbyIdAsync(x=>x.Id==productCreateDto.CategoryId));
+        createdProductDto.Category = _mapper.Map<CategoryDto>(await _categoryRepository.GetAsync(x => x.Id == productCreateDto.CategoryId));
         return ResponseDto<ProductDto>.Success(createdProductDto, 201);
     }
 
     public async Task<ResponseDto<NoContent>> DeleteAsync(int id)
     {
-        Product product = await _productRepository.GetbyIdAsync(x => x.Id == id);
+        Product product = await _productRepository.GetAsync(x => x.Id == id);
         if (product == null)
         {
             return ResponseDto<NoContent>.Fail("${id} id'li ürün bulunamadı", 404);
@@ -98,7 +98,7 @@ public class ProductService : IProductService
     public async Task<ResponseDto<List<ProductDto>>> GetAllCategoryId(int categoryId)
     {
         List<Product> productList = await _productRepository.GetAllAsync(x => x.IsActive == true && x.CategoryId == categoryId, x => x.Include(y => y.Category));
-        var category = await _categoryRepository.GetbyIdAsync(x => x.Id == categoryId);
+        var category = await _categoryRepository.GetAsync(x => x.Id == categoryId);
         if (category == null)
         {
             return ResponseDto<List<ProductDto>>.Fail($"Böyle bir kategori bulunamadı!", 404);
@@ -112,9 +112,9 @@ public class ProductService : IProductService
         return ResponseDto<List<ProductDto>>.Success(productDtoList, 200);
     }
 
-    public async Task<ResponseDto<ProductDto>> GetByIdAsync(int id)
+    public async Task<ResponseDto<ProductDto>> GetAsync(int id)
     {
-        Product product = await _productRepository.GetbyIdAsync(x => x.Id == id, x => x.Include(y => y.Category));
+        Product product = await _productRepository.GetAsync(x => x.Id == id, x => x.Include(y => y.Category));
 
         if (product == null)
         {
@@ -160,7 +160,7 @@ public class ProductService : IProductService
 
     public async Task<ResponseDto<NoContent>> UpdateIsActiveAsync(int id)
     {
-        var product = await _productRepository.GetbyIdAsync(x => x.Id == id);
+        var product = await _productRepository.GetAsync(x => x.Id == id);
         if (product == null)
         {
             return ResponseDto<NoContent>.Fail($"{id} id'li bir ürün bulunamadı! ", 404);
@@ -172,7 +172,7 @@ public class ProductService : IProductService
 
     public async Task<ResponseDto<NoContent>> UpdateIsHomeAsync(int id)
     {
-        var product = await _productRepository.GetbyIdAsync(x => x.Id == id);
+        var product = await _productRepository.GetAsync(x => x.Id == id);
         if (product == null)
         {
             return ResponseDto<NoContent>.Fail($"{id} id'li ürün bulunamadı!", 404);
@@ -186,7 +186,7 @@ public class ProductService : IProductService
 
     public async Task<ResponseDto<ProductDto>> UpdateAsync(ProductUpdateDto productUpdateDto)
     {
-        var product = await _productRepository.GetbyIdAsync(x => x.Id == productUpdateDto.Id);
+        var product = await _productRepository.GetAsync(x => x.Id == productUpdateDto.Id);
         if (product == null)
         {
             return ResponseDto<ProductDto>.Fail($"{productUpdateDto.Id} id'li ürün bulunamadı!", 404);
@@ -196,7 +196,7 @@ public class ProductService : IProductService
         product.Url = CustomUrlHelper.GetUrl(productUpdateDto.Name);
         await _productRepository.UpdateAsync(product);
         var productDto = _mapper.Map<ProductDto>(product);
-        productDto.Category = _mapper.Map<CategoryDto>(await _categoryRepository.GetbyIdAsync(x => x.Id == productDto.CategoryId));
+        productDto.Category = _mapper.Map<CategoryDto>(await _categoryRepository.GetAsync(x => x.Id == productDto.CategoryId));
         return ResponseDto<ProductDto>.Success(productDto, 200);
     }
 }

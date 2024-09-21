@@ -48,7 +48,7 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         return await query.ToListAsync();
     }
 
-    public async Task<TEntity> GetbyIdAsync(Expression<Func<TEntity, bool>> options = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> predicate = null)
+    public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> options = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> predicate = null)
     {
         IQueryable<TEntity> query = _dbSet;
         if (predicate != null)

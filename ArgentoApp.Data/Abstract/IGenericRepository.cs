@@ -12,7 +12,7 @@ public interface IGenericRepository<TEntity> where TEntity : class
 
     Task UpdateAsync(TEntity entity);
     Task DeleteAsync(TEntity entity);
-    Task <TEntity> GetbyIdAsync( Expression<Func<TEntity, bool>>? options=null,
+    Task <TEntity> GetAsync( Expression<Func<TEntity, bool>>? options=null,
             Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? predicate=null);
     Task <List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>>? options=null,
             Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? predicate=null);

@@ -68,11 +68,11 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2620),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2950),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2620),
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2950),
                             Name = "Kırmızı Jasper",
                             Price = 100m,
                             Properties = "Kırmızı Jasper",
@@ -82,13 +82,13 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 2,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2630),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2960),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2630),
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2960),
                             Name = "Turuncu Kalsit",
-                            Price = 100m,
+                            Price = 200m,
                             Properties = "Turuncu Kalsit",
                             Url = "Kalsit"
                         },
@@ -96,13 +96,13 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 3,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2640),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2970),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2640),
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2970),
                             Name = "Kaplan Gözü ",
-                            Price = 100m,
+                            Price = 300m,
                             Properties = "Kaplan Gözü",
                             Url = "KaplanGozu"
                         },
@@ -110,13 +110,13 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 4,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2650),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2970),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2650),
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2980),
                             Name = "Moldavit",
-                            Price = 100m,
+                            Price = 400m,
                             Properties = "Moldavit",
                             Url = "Moldavit"
                         },
@@ -124,13 +124,13 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 5,
                             CategoryId = 5,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2660),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2980),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2660),
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2980),
                             Name = "Larimar",
-                            Price = 100m,
+                            Price = 500m,
                             Properties = "Larimar",
                             Url = "Larimar"
                         },
@@ -138,13 +138,13 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 6,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2660),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2990),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2670),
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(2990),
                             Name = "Sodalit",
-                            Price = 100m,
+                            Price = 600m,
                             Properties = "Sodalit",
                             Url = "Sodalit"
                         },
@@ -152,16 +152,68 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 7,
                             CategoryId = 7,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2670),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(3000),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(2670),
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(3000),
                             Name = "Kristal Kuvars",
-                            Price = 100m,
+                            Price = 700m,
                             Properties = "Kristal Kuvars",
                             Url = "KristalKuvars"
                         });
+                });
+
+            modelBuilder.Entity("ArgentoApp.Entity.Concrete.Cart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Carts");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 201, DateTimeKind.Local).AddTicks(9830),
+                            UserId = "1"
+                        });
+                });
+
+            modelBuilder.Entity("ArgentoApp.Entity.Concrete.CartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Quentity")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartItems");
                 });
 
             modelBuilder.Entity("ArgentoApp.Entity.Concrete.Category", b =>
@@ -204,73 +256,146 @@ namespace ArgentoApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1380),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1910),
                             Description = "Kök çakra ile uyumlu taşlar burada. Kırmızı renk ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1420),
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1920),
                             Name = "1. Kök Çakra (Muladhara Çakra)",
                             Url = "Kök"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1430),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1930),
                             Description = "Sakral çakra ile uyumlu taşlar burada. Turuncu renk ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1430),
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1930),
                             Name = "2.Sakral Çakra (Svadhistana Çakra)",
                             Url = "Sakral"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1440),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1930),
                             Description = "Solar Plexus çakra ile uyumlu taşlar burada. Sarı renk ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1440),
-                            Name = " 3. Solar Pleksus Çakra(Manipura Çakra)",
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1930),
+                            Name = "3. Solar Pleksus Çakra(Manipura Çakra)",
                             Url = "SolarPlexus"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1440),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1930),
                             Description = "Kalp çakrası ile uyumlu taşlar burada. Yeşil renk ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1440),
-                            Name = "Kalp Çakrası (Anahata Çakra)",
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1930),
+                            Name = "4.Kalp Çakrası (Anahata Çakra)",
                             Url = "Kalp"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1440),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1940),
                             Description = "Boğaz çakrası ile uyumlu taşlar burada. Mavi renk ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1450),
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1940),
                             Name = "5.Boğaz Çakrası (Vishuddha Çakra) ",
                             Url = "Boğaz"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1450),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1940),
                             Description = "3.Göz çakrası ile uyumlu taşlar burada. İndigo mavi ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1450),
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1940),
                             Name = "6.Üçüncü Göz Çakrası (Ajna Çakra)",
                             Url = "3.Göz"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1450),
+                            CreatedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1940),
                             Description = "Taç çakra ile uyumlu taşlar burada. Menekşe rengi ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 14, 13, 34, 57, 433, DateTimeKind.Local).AddTicks(1450),
-                            Name = "7. Taç Çakra (Sahasrara Çakra)",
+                            ModifiedDate = new DateTime(2024, 9, 21, 13, 52, 4, 202, DateTimeKind.Local).AddTicks(1950),
+                            Name = "7.Taç Çakra (Sahasrara Çakra)",
                             Url = "Taç"
                         });
+                });
+
+            modelBuilder.Entity("ArgentoApp.Entity.Concrete.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Adress")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("City")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("OrderState")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PaymentType")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PhoneNumber")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("ArgentoApp.Entity.Concrete.OrderItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("OrderItemId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("OrderItemId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("ArgentoApp.Entity.Concrete.Abstact.Product", b =>
@@ -282,6 +407,58 @@ namespace ArgentoApp.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("ArgentoApp.Entity.Concrete.CartItem", b =>
+                {
+                    b.HasOne("ArgentoApp.Entity.Concrete.Cart", "Cart")
+                        .WithMany("CartItems")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ArgentoApp.Entity.Concrete.Abstact.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ArgentoApp.Entity.Concrete.OrderItem", b =>
+                {
+                    b.HasOne("ArgentoApp.Entity.Concrete.Order", "Order")
+                        .WithMany()
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ArgentoApp.Entity.Concrete.OrderItem", null)
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderItemId");
+
+                    b.HasOne("ArgentoApp.Entity.Concrete.Abstact.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ArgentoApp.Entity.Concrete.Cart", b =>
+                {
+                    b.Navigation("CartItems");
+                });
+
+            modelBuilder.Entity("ArgentoApp.Entity.Concrete.OrderItem", b =>
+                {
+                    b.Navigation("OrderItems");
                 });
 #pragma warning restore 612, 618
         }

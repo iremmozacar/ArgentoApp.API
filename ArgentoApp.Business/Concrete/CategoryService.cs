@@ -39,7 +39,7 @@ public class CategoryService : ICategoryService
     }
     public async Task<ResponseDto<NoContent>> DeleteAsync(int id)
     {
-        var category = await _categoryRepository.GetbyIdAsync(x => x.Id == id);
+        var category = await _categoryRepository.GetAsync(x => x.Id == id);
         if (category == null)
         {
             return ResponseDto<NoContent>.Fail($"{id} id'li kategori bulunamadı!", 404);
@@ -81,7 +81,7 @@ public class CategoryService : ICategoryService
         var categoryDtoList = _mapper.Map<List<CategoryDto>>(categoryList);
         return ResponseDto<List<CategoryDto>>.Success(categoryDtoList, 200);
     }
-    public async Task<ResponseDto<CategoryDto>> GetByIdAsync(int id)
+    public async Task<ResponseDto<CategoryDto>> GetAsync(int id)
     {
         var category = await _categoryRepository.GetAllAsync(x => x.Id == id);
         if (category == null)
@@ -102,7 +102,7 @@ public class CategoryService : ICategoryService
     }
     public async Task<ResponseDto<CategoryDto>> UpdateAsync(CategoryUpdateDto categoryUpdateDto)
     {
-        var category = await _categoryRepository.GetbyIdAsync(x => x.Id == categoryUpdateDto.Id);
+        var category = await _categoryRepository.GetAsync(x => x.Id == categoryUpdateDto.Id);
         if (category == null)
         {
             return ResponseDto<CategoryDto>.Fail("Böyle bir kategori bulunamadı!", 404);
