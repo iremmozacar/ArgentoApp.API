@@ -1,6 +1,7 @@
 using System;
 using ArgentoApp.Business.Abstract;
 using ArgentoApp.Data.Abstract;
+using ArgentoApp.Entity.Concrete;
 using ArgentoApp.Shared.DTOs.CartItemDTOs;
 using ArgentoApp.Shared.DTOs.ResponseDTOs;
 using AutoMapper;
@@ -73,7 +74,7 @@ public class CartItemService : ICartItemService
             return ResponseDto<CartItemDto>.Fail("İlgili ürün sepette bulunamadı!",404);
         }
         var cartItemDto= _mapper.Map<CartItemDto>(cartItem);
-       return ResponseDto<CartItemDto>.Success(200);
+       return ResponseDto<CartItemDto>.Success(cartItemDto, 200);
 
     }
 }

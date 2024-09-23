@@ -32,12 +32,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\General\6f1231c8-594e-433b-97f4-357b7e657101.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\Products\7aeb3a66-c631-42f6-aa6d-5f353f528b0d.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\Products\d4ce4260-7826-476f-b18d-10e378263f27.png))">
       <SourceType>Package</SourceType>
       <SourceId>ArgentoApp.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ArgentoApp.API</BasePath>
-      <RelativePath>images/Products/7aeb3a66-c631-42f6-aa6d-5f353f528b0d.jpg</RelativePath>
+      <RelativePath>images/Products/d4ce4260-7826-476f-b18d-10e378263f27.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -46,7 +46,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\Products\7aeb3a66-c631-42f6-aa6d-5f353f528b0d.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\Products\d4ce4260-7826-476f-b18d-10e378263f27.png))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

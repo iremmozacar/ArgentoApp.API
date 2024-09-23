@@ -37,6 +37,7 @@ public class ProductService : IProductService
     {
         Product product = _mapper.Map<Product>(productCreateDto);
         product.Url = CustomUrlHelper.GetUrl(productCreateDto.Name);
+        product.IsActive= product.IsHome ? true : product.IsActive;
         var createdProduct = await _productRepository.CreateAsync(product);
         if (createdProduct == null)
         {
@@ -137,7 +138,7 @@ public class ProductService : IProductService
 
     public async Task<ResponseDto<List<ProductDto>>> GetHomeAsync(bool isHome = true)
     {
-        List<Product> productList = await _productRepository.GetAllAsync(x => x.IsActive == true && x.IsHome == isHome, x => x.Include(y => y.Category));
+        List<Product> productList = await _productRepository.GetAllAsync(x=> x.IsHome == isHome, x => x.Include(y => y.Category));
         string statusText = isHome ? "Ana sayfa ürünü" : "Ana sayfada olmayan ürün";
         if (productList.Count == 0)
         {
@@ -149,7 +150,7 @@ public class ProductService : IProductService
 
     public async Task<ResponseDto<int>> GetHomesCountAsync(bool IsHome = true)
     {
-        int count = await _productRepository.GetCountAsync(x => x.IsActive == true && x.IsHome == IsHome);
+        int count = await _productRepository.GetCountAsync(x => x.IsHome == IsHome);
         string statusText = IsHome ? "Ana sayfa ürünü" : "Ana sayfada olmayan ürün";
         if (count == 0)
         {
@@ -166,6 +167,11 @@ public class ProductService : IProductService
             return ResponseDto<NoContent>.Fail($"{id} id'li bir ürün bulunamadı! ", 404);
         }
         product.IsActive = !product.IsActive;
+        if (!product.IsActive)
+        {
+            product.IsHome = false;
+        }
+      
         await _productRepository.UpdateAsync(product);
         return ResponseDto<NoContent>.Success(200);
     }
@@ -191,9 +197,12 @@ public class ProductService : IProductService
         {
             return ResponseDto<ProductDto>.Fail($"{productUpdateDto.Id} id'li ürün bulunamadı!", 404);
         }
+        var createdDate = product.CreatedDate;
         product = _mapper.Map<Product>(productUpdateDto);
+        product.CreatedDate=createdDate;
         product.ModifiedDate = DateTime.Now;
         product.Url = CustomUrlHelper.GetUrl(productUpdateDto.Name);
+        product.IsActive = product.IsHome ? true : product.IsActive;
         await _productRepository.UpdateAsync(product);
         var productDto = _mapper.Map<ProductDto>(product);
         productDto.Category = _mapper.Map<CategoryDto>(await _categoryRepository.GetAsync(x => x.Id == productDto.CategoryId));

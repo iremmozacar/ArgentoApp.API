@@ -51,7 +51,7 @@ private readonly ICartRepository _cartRepository;
     }
     public async Task<ResponseDto<CartDto>> GetCartByUserIdAsync(string userId)
     {
-        var cart = await _cartRepository.GetAsync(x=>x.UserId==userId);
+        var cart = await _cartRepository.GetAsync(x=>x.UserId==userId, source=>source.Include(x=>x.CartItems));
         if (cart ==null){
             return ResponseDto<CartDto>.Fail("Kullanıcıya ait bi sepet bulunamadı!", 404);
         }

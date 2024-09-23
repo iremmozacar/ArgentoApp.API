@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3CA0Y0/xsNn3uj6KFUXZkyExrulDaQ0FvJ3a3MheVhM=",
+  "Hash": "wWLSKqS7czQHxLmqzJMh+KY5fdY8WCT4gI+ZAHfd8VQ=",
   "Source": "ArgentoApp.API",
   "BasePath": "_content/ArgentoApp.API",
   "Mode": "Default",
@@ -55,12 +55,12 @@
       "OriginalItemSpec": "wwwroot/images/General/6f1231c8-594e-433b-97f4-357b7e657101.jpg"
     },
     {
-      "Identity": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/images/Products/7aeb3a66-c631-42f6-aa6d-5f353f528b0d.jpg",
+      "Identity": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/images/Products/d4ce4260-7826-476f-b18d-10e378263f27.png",
       "SourceId": "ArgentoApp.API",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/iremozacar/Documents/GitHub/ArgentoApp.API/ArgentoApp.API/wwwroot/",
       "BasePath": "_content/ArgentoApp.API",
-      "RelativePath": "images/Products/7aeb3a66-c631-42f6-aa6d-5f353f528b0d.jpg",
+      "RelativePath": "images/Products/d4ce4260-7826-476f-b18d-10e378263f27.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,7 +71,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/Products/7aeb3a66-c631-42f6-aa6d-5f353f528b0d.jpg"
+      "OriginalItemSpec": "wwwroot/images/Products/d4ce4260-7826-476f-b18d-10e378263f27.png"
     }
   ]
 }

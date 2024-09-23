@@ -44,13 +44,13 @@ public class ProductsController : CustomControllerBase
         return CreateActionResult(response);
     }
 
-    [HttpGet("{isActive}")]
+    [HttpGet("{isActive?}")]
     public async Task<IActionResult> GetActives(bool isActive = true)
     {
         var response = await _productService.GetActivesAsync(isActive);
         return CreateActionResult(response);
     }
-    [HttpGet("{isHome}")]
+    [HttpGet("{isHome?}")]
     public async Task<IActionResult> GetHomes(bool isHome = true)
     {
         var response = await _productService.GetHomeAsync(isHome);
@@ -75,18 +75,23 @@ public class ProductsController : CustomControllerBase
         var response = await _productService.GetCountAsync();
         return CreateActionResult(response);
     }
-    [HttpGet("{isActive}")]
+    [HttpGet("{isActive?}")]
     public async Task<IActionResult> GetActivesCount(bool isActive = true)
     {
         var response = await _productService.GetActivesAsync(isActive);
         return CreateActionResult(response);
 
     }
-    [HttpGet("{isHome}")]
-    public async Task<IActionResult> GetHomesCount(bool isHome = true)
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateIsActive(int id)
     {
-        var response = await _productService.GetHomesCountAsync(isHome);
+        var response = await _productService.UpdateIsActiveAsync(id);
         return CreateActionResult(response);
-
+    }
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateIsHome(int id)
+    {
+        var response = await _productService.UpdateIsHomeAsync(id);
+        return CreateActionResult(response);
     }
 }

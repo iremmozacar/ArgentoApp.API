@@ -40,7 +40,7 @@ public class CategoriesController : CustomControllerBase
     return CreateActionResult(response);
   }
 
-  [HttpGet("{isActive}")]
+  [HttpGet("{isActive?}")]
   public async Task<IActionResult> GetActives()
   {
     var response = await _categoryService.GetActivesAsync();
@@ -54,7 +54,7 @@ public class CategoriesController : CustomControllerBase
     return CreateActionResult(response);
   }
 
-  [HttpGet]
+  [HttpGet("{isActive?}")]
   public async Task<IActionResult> GetActivesCount()
   {
     var response = await _categoryService.GetActivesCountAsync();

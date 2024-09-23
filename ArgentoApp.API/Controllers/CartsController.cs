@@ -9,12 +9,12 @@ namespace ArgentoApp.API.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class CartController : CustomControllerBase
+    public class CartsController : CustomControllerBase
     {
         private readonly ICartService _cartService;
         private readonly ICartItemService _cartItemService;
 
-        public CartController(ICartService cartService, ICartItemService cartItemService)
+        public CartsController(ICartService cartService, ICartItemService cartItemService)
         {
             _cartService = cartService;
             _cartItemService = cartItemService;
@@ -27,14 +27,14 @@ namespace ArgentoApp.API.Controllers
             return CreateActionResult(response);
         }
         [HttpGet("{userId}")]
-        public async Task<IActionResult> GetCartByUserIdAsync(string userId)
+        public async Task<IActionResult> GetCart(string userId)
         {
             var response = await _cartService.GetCartByUserIdAsync(userId);
             return CreateActionResult(response);
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddToCartAsync(string userId, int productId, int quantity)
+        public async Task<IActionResult> AddToCart(string userId, int productId, int quantity)
         {
             var response = await _cartService.AddToCartAsync(userId, productId, quantity);
             return CreateActionResult(response);
@@ -52,8 +52,8 @@ namespace ArgentoApp.API.Controllers
             return CreateActionResult(response);
         }
 
-        [HttpDelete("{cartId}")]
-        public async Task<IActionResult> Delete(int cartItemId)
+        [HttpDelete("{cartItemId}")]
+        public async Task<IActionResult> DeleteItem(int cartItemId)
         {
             var response = await _cartItemService.DeleteCartItemAsync(cartItemId);
             return CreateActionResult(response);
