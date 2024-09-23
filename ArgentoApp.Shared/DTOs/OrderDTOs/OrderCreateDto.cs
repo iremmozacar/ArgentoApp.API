@@ -1,5 +1,5 @@
 using System;
-using ArgentoApp.Shared.DTOs.OrderItemDTOs;
+using ArgentoApp.Shared.DTOs.OrderDTOs;
 
 namespace ArgentoApp.Shared.DTOs.OrderDTOs;
 

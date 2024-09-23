@@ -1,6 +1,6 @@
 using System;
 using ArgentoApp.Shared.ComplexTypes;
-using ArgentoApp.Shared.DTOs.OrderItemDTOs;
+using ArgentoApp.Shared.DTOs.OrderDTOs;
 
 namespace ArgentoApp.Shared.DTOs.OrderDTOs;
 

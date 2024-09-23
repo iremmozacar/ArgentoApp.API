@@ -14,6 +14,7 @@ public class Order
     public string City { get; set; }    
     public string PhoneNumber { get; set; }    
     public string Email { get; set; }   
+    public bool IsCancel { get; set; }
     public PaymentType PaymentType { get; set; }
     public OrderState OrderState { get; set; }
     public List<OrderItem> OrderItems { get; set; }

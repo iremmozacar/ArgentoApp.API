@@ -7,7 +7,7 @@ using ArgentoApp.Shared.DTOs.Categories;
 using ArgentoApp.Shared.DTOs.CategoryDto;
 using ArgentoApp.Shared.DTOs.CategoryDTOs;
 using ArgentoApp.Shared.DTOs.OrderDTOs;
-using ArgentoApp.Shared.DTOs.OrderItemDTOs;
+
 using ArgentoApp.Shared.DTOs.ProductDTOs;
 using AutoMapper;
 
@@ -38,9 +38,8 @@ public class GeneralMappingProfile : Profile
         CreateMap<Order, OrderCreateDto>().ReverseMap().ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.OrderItems));
         CreateMap<Order, OrderUpdateDto>().ReverseMap();
         //OrderItem>>>
-        CreateMap<OrderItem, OrderItemDto>().ReverseMap();
-        CreateMap<OrderItem, OrderItemCreateDto>().ReverseMap();
-        CreateMap<OrderItem, OrderItemUpdateDto>().ReverseMap();
+        CreateMap<OrderItem, OrderItemDto>().ReverseMap().ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product)); 
+
 
 
 
