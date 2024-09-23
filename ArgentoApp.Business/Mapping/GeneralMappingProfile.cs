@@ -37,6 +37,7 @@ public class GeneralMappingProfile : Profile
         CreateMap<Order, OrderDto>().ReverseMap();
         CreateMap<Order, OrderCreateDto>().ReverseMap().ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.OrderItems));
         CreateMap<Order, OrderUpdateDto>().ReverseMap();
+ 
         //OrderItem>>>
         CreateMap<OrderItem, OrderItemDto>().ReverseMap().ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product)); 
 

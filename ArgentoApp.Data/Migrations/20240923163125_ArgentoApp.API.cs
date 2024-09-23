@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ArgentoApp.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class ArgentoAppDB : Migration
+    public partial class ArgentoAppAPI : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,7 +19,6 @@ namespace ArgentoApp.Data.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    IsCancel = table.Column<bool>(type: "INTEGER", nullable: false),
                     UserId = table.Column<string>(type: "TEXT", nullable: true),
                     FirstName = table.Column<string>(type: "TEXT", nullable: true),
                     LastName = table.Column<string>(type: "TEXT", nullable: true),
@@ -203,20 +202,20 @@ namespace ArgentoApp.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Carts",
                 columns: new[] { "Id", "CreatedDate", "UserId" },
-                values: new object[] { 1, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(2350), "1" });
+                values: new object[] { 1, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(7270), "1" });
 
             migrationBuilder.InsertData(
                 table: "Categories",
                 columns: new[] { "Id", "CreatedDate", "Description", "IsActive", "ModifiedDate", "Name", "Url" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(3990), "Kök çakra ile uyumlu taşlar burada. Kırmızı renk ile ifade edilir.", true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4000), "1. Kök Çakra (Muladhara Çakra)", "Kök" },
-                    { 2, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4000), "Sakral çakra ile uyumlu taşlar burada. Turuncu renk ile ifade edilir.", true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4000), "2.Sakral Çakra (Svadhistana Çakra)", "Sakral" },
-                    { 3, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4010), "Solar Plexus çakra ile uyumlu taşlar burada. Sarı renk ile ifade edilir.", true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4010), "3. Solar Pleksus Çakra(Manipura Çakra)", "SolarPlexus" },
-                    { 4, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4010), "Kalp çakrası ile uyumlu taşlar burada. Yeşil renk ile ifade edilir.", true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4010), "4.Kalp Çakrası (Anahata Çakra)", "Kalp" },
-                    { 5, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4010), "Boğaz çakrası ile uyumlu taşlar burada. Mavi renk ile ifade edilir.", true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4020), "5.Boğaz Çakrası (Vishuddha Çakra) ", "Boğaz" },
-                    { 6, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4020), "3.Göz çakrası ile uyumlu taşlar burada. İndigo mavi ile ifade edilir.", true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4020), "6.Üçüncü Göz Çakrası (Ajna Çakra)", "3.Göz" },
-                    { 7, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4020), "Taç çakra ile uyumlu taşlar burada. Menekşe rengi ile ifade edilir.", true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4020), "7.Taç Çakra (Sahasrara Çakra)", "Taç" }
+                    { 1, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8900), "Kök çakra ile uyumlu taşlar burada. Kırmızı renk ile ifade edilir.", true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8900), "1. Kök Çakra (Muladhara Çakra)", "Kök" },
+                    { 2, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910), "Sakral çakra ile uyumlu taşlar burada. Turuncu renk ile ifade edilir.", true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910), "2.Sakral Çakra (Svadhistana Çakra)", "Sakral" },
+                    { 3, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910), "Solar Plexus çakra ile uyumlu taşlar burada. Sarı renk ile ifade edilir.", true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910), "3. Solar Pleksus Çakra(Manipura Çakra)", "SolarPlexus" },
+                    { 4, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910), "Kalp çakrası ile uyumlu taşlar burada. Yeşil renk ile ifade edilir.", true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910), "4.Kalp Çakrası (Anahata Çakra)", "Kalp" },
+                    { 5, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8920), "Boğaz çakrası ile uyumlu taşlar burada. Mavi renk ile ifade edilir.", true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8920), "5.Boğaz Çakrası (Vishuddha Çakra) ", "Boğaz" },
+                    { 6, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8920), "3.Göz çakrası ile uyumlu taşlar burada. İndigo mavi ile ifade edilir.", true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8920), "6.Üçüncü Göz Çakrası (Ajna Çakra)", "3.Göz" },
+                    { 7, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8920), "Taç çakra ile uyumlu taşlar burada. Menekşe rengi ile ifade edilir.", true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8930), "7.Taç Çakra (Sahasrara Çakra)", "Taç" }
                 });
 
             migrationBuilder.InsertData(
@@ -224,13 +223,13 @@ namespace ArgentoApp.Data.Migrations
                 columns: new[] { "Id", "CategoryId", "CreatedDate", "ImageUrl", "IsActive", "IsHome", "ModifiedDate", "Name", "Price", "Properties", "Url" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4970), "", true, true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4970), "Kırmızı Jasper", 100m, "Kırmızı Jasper", "Jasper" },
-                    { 2, 2, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4980), "", true, true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4980), "Turuncu Kalsit", 200m, "Turuncu Kalsit", "Kalsit" },
-                    { 3, 3, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4990), "", true, true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4990), "Kaplan Gözü ", 300m, "Kaplan Gözü", "KaplanGozu" },
-                    { 4, 4, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5000), "", true, true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5000), "Moldavit", 400m, "Moldavit", "Moldavit" },
-                    { 5, 5, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5010), "", true, true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5010), "Larimar", 500m, "Larimar", "Larimar" },
-                    { 6, 3, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5010), "", true, true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5010), "Sodalit", 600m, "Sodalit", "Sodalit" },
-                    { 7, 7, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5020), "", true, true, new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5020), "Kristal Kuvars", 700m, "Kristal Kuvars", "KristalKuvars" }
+                    { 1, 1, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9870), "", true, true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9870), "Kırmızı Jasper", 100m, "Kırmızı Jasper", "Jasper" },
+                    { 2, 2, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9880), "", true, true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9880), "Turuncu Kalsit", 200m, "Turuncu Kalsit", "Kalsit" },
+                    { 3, 3, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9880), "", true, true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9890), "Kaplan Gözü ", 300m, "Kaplan Gözü", "KaplanGozu" },
+                    { 4, 4, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9890), "", true, true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9890), "Moldavit", 400m, "Moldavit", "Moldavit" },
+                    { 5, 5, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9900), "", true, true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9900), "Larimar", 500m, "Larimar", "Larimar" },
+                    { 6, 3, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9910), "", true, true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9910), "Sodalit", 600m, "Sodalit", "Sodalit" },
+                    { 7, 7, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9910), "", true, true, new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9920), "Kristal Kuvars", 700m, "Kristal Kuvars", "KristalKuvars" }
                 });
 
             migrationBuilder.CreateIndex(

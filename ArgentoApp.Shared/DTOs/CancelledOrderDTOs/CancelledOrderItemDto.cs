@@ -1,15 +1,12 @@
 using System;
-using ArgentoApp.Shared.DTOs.OrderDTOs;
-using ArgentoApp.Shared.DTOs.ProductDTOs;
 
 namespace ArgentoApp.Shared.DTOs.OrderDTOs;
 
-public class OrderItemDto
+public class CancelledOrderItemDto
 {
     public int Id { get; set; }
     public int ProductId { get; set; }
-    public int OrderId { get; set; }
+    public string ProductName { get; set; }
     public decimal Price { get; set; }
     public int Quantity { get; set; }
-    public ProductDto Product { get; set; }
 }

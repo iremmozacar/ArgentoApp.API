@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ArgentoApp.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240923134616_ArgentoAppDB")]
-    partial class ArgentoAppDB
+    [Migration("20240923163125_ArgentoApp.API")]
+    partial class ArgentoAppAPI
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,11 +71,11 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4970),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9870),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4970),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9870),
                             Name = "Kırmızı Jasper",
                             Price = 100m,
                             Properties = "Kırmızı Jasper",
@@ -85,11 +85,11 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 2,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4980),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9880),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4980),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9880),
                             Name = "Turuncu Kalsit",
                             Price = 200m,
                             Properties = "Turuncu Kalsit",
@@ -99,11 +99,11 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 3,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4990),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9880),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4990),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9890),
                             Name = "Kaplan Gözü ",
                             Price = 300m,
                             Properties = "Kaplan Gözü",
@@ -113,11 +113,11 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 4,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5000),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9890),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5000),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9890),
                             Name = "Moldavit",
                             Price = 400m,
                             Properties = "Moldavit",
@@ -127,11 +127,11 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 5,
                             CategoryId = 5,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5010),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9900),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5010),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9900),
                             Name = "Larimar",
                             Price = 500m,
                             Properties = "Larimar",
@@ -141,11 +141,11 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 6,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5010),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9910),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5010),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9910),
                             Name = "Sodalit",
                             Price = 600m,
                             Properties = "Sodalit",
@@ -155,11 +155,11 @@ namespace ArgentoApp.Data.Migrations
                         {
                             Id = 7,
                             CategoryId = 7,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5020),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9910),
                             ImageUrl = "",
                             IsActive = true,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(5020),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(9920),
                             Name = "Kristal Kuvars",
                             Price = 700m,
                             Properties = "Kristal Kuvars",
@@ -184,9 +184,6 @@ namespace ArgentoApp.Data.Migrations
 
                     b.Property<string>("FirstName")
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsCancel")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("LastName")
                         .HasColumnType("TEXT");
@@ -249,7 +246,7 @@ namespace ArgentoApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(2350),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(7270),
                             UserId = "1"
                         });
                 });
@@ -321,70 +318,70 @@ namespace ArgentoApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(3990),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8900),
                             Description = "Kök çakra ile uyumlu taşlar burada. Kırmızı renk ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4000),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8900),
                             Name = "1. Kök Çakra (Muladhara Çakra)",
                             Url = "Kök"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4000),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910),
                             Description = "Sakral çakra ile uyumlu taşlar burada. Turuncu renk ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4000),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910),
                             Name = "2.Sakral Çakra (Svadhistana Çakra)",
                             Url = "Sakral"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4010),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910),
                             Description = "Solar Plexus çakra ile uyumlu taşlar burada. Sarı renk ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4010),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910),
                             Name = "3. Solar Pleksus Çakra(Manipura Çakra)",
                             Url = "SolarPlexus"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4010),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910),
                             Description = "Kalp çakrası ile uyumlu taşlar burada. Yeşil renk ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4010),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8910),
                             Name = "4.Kalp Çakrası (Anahata Çakra)",
                             Url = "Kalp"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4010),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8920),
                             Description = "Boğaz çakrası ile uyumlu taşlar burada. Mavi renk ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4020),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8920),
                             Name = "5.Boğaz Çakrası (Vishuddha Çakra) ",
                             Url = "Boğaz"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4020),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8920),
                             Description = "3.Göz çakrası ile uyumlu taşlar burada. İndigo mavi ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4020),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8920),
                             Name = "6.Üçüncü Göz Çakrası (Ajna Çakra)",
                             Url = "3.Göz"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4020),
+                            CreatedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8920),
                             Description = "Taç çakra ile uyumlu taşlar burada. Menekşe rengi ile ifade edilir.",
                             IsActive = true,
-                            ModifiedDate = new DateTime(2024, 9, 23, 16, 46, 16, 596, DateTimeKind.Local).AddTicks(4020),
+                            ModifiedDate = new DateTime(2024, 9, 23, 19, 31, 25, 9, DateTimeKind.Local).AddTicks(8930),
                             Name = "7.Taç Çakra (Sahasrara Çakra)",
                             Url = "Taç"
                         });
