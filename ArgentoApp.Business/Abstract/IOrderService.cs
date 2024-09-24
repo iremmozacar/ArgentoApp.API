@@ -14,6 +14,6 @@ public interface IOrderService
     Task<ResponseDto<OrderDto>> GetOrderAsync (int Id);
     Task<ResponseDto<NoContent>> ChangeOrderStatusAsync (int id, OrderState orderState);
     Task<ResponseDto<NoContent>> CancelOrder (int id);
-    Task<ResponseDto<List<OrderDto>>> GetCancelledOrdersAsync();
+
 
 }

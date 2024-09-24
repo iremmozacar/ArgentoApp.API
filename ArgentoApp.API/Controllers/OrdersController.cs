@@ -52,11 +52,6 @@ namespace ArgentoApp.API.Controllers
          var response = await _orderservice.CancelOrder(id);
          return CreateActionResult(response);
         }
-        [HttpGet]
-        public async Task<IActionResult> GetCancelledOrders()
-        {
-            var response = await _orderservice.GetCancelledOrdersAsync();
-            return CreateActionResult(response);
-        }
+
     }
 }

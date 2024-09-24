@@ -18,8 +18,6 @@ public class AppDbContext : DbContext
     public DbSet<CartItem> CartItems { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
-    public DbSet<CancelledOrder> CancelledOrders { get; set; }
-    public DbSet<CancelledOrderItem> CancelledOrderItems { get; set; }
 
 
 
@@ -27,15 +25,10 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-       modelBuilder.ApplyConfigurationsFromAssembly(typeof(CategoryConfig).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(CategoryConfig).Assembly);
+
+    
+
         base.OnModelCreating(modelBuilder);
-        modelBuilder.Entity<CancelledOrder>()
-
-        
-     .HasMany(c => c.OrderItems)
-     .WithOne(oi => oi.CancelledOrder)
-     .HasForeignKey(oi => oi.CancelledOrderId);
-
-
     }
 }

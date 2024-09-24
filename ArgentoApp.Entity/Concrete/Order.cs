@@ -6,6 +6,7 @@ namespace ArgentoApp.Entity.Concrete;
 public class Order
 {
     public int Id { get; set; }
+    public bool IsActive { get; set; }=true;
     public DateTime OrderDate { get; set; }= DateTime.Now;
     public string UserId { get; set; }
     public string FirstName { get; set; }   

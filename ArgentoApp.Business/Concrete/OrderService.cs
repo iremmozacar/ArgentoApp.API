@@ -16,18 +16,24 @@ public class OrderService : IOrderService
 {
     private readonly IOrderRepository _orderRepository;
     private readonly IMapper _mapper;
-    private readonly ICancelledOrderRepository _cancelledOrderRepository;
-    private readonly IProductRepository _productRepository;
-    public OrderService(IOrderRepository orderRepository, IMapper mapper, ICancelledOrderRepository cancelledOrderRepository)
+    public OrderService(IOrderRepository orderRepository, IMapper mapper)
     {
         _orderRepository = orderRepository;
         _mapper = mapper;
-        _cancelledOrderRepository = cancelledOrderRepository;
+
     }
 
-    public Task<ResponseDto<NoContent>> ChangeOrderStatusAsync(int id, OrderState orderState)
+
+    public async Task<ResponseDto<NoContent>> ChangeOrderStatusAsync(int id, OrderState orderState)
     {
-        throw new NotImplementedException();
+        var order = await _orderRepository.GetAsync(x => x.Id == id);
+        if (order == null)
+        {
+            return ResponseDto<NoContent>.Fail("Böyle bir sipariş bulunamadı!", 404);
+        }
+        order.OrderState = orderState;
+        await _orderRepository.UpdateAsync(order);
+        return ResponseDto<NoContent>.Success(200);
     }
 
     public async Task<ResponseDto<NoContent>> CreateAsync(OrderCreateDto orderCreateDto)
@@ -51,7 +57,8 @@ public class OrderService : IOrderService
 
     public async Task<ResponseDto<OrderDto>> GetOrderAsync(int Id)
     {
-        var order = await _orderRepository.GetAsync(x => x.Id == Id, source => source.Include(x => x.OrderItems).ThenInclude(y => y.Product));
+        var order = await _orderRepository.GetAsync(x => x.Id == Id && x.IsActive,
+            source => source.Include(x => x.OrderItems).ThenInclude(y => y.Product));
         if (order == null)
         {
             return ResponseDto<OrderDto>.Fail("Böyle bir sipariş bulunamadı!", 404);
@@ -62,21 +69,21 @@ public class OrderService : IOrderService
 
     public async Task<ResponseDto<List<OrderDto>>> GetOrdersAsync()
     {
-        var orders = await _orderRepository.GetAllAsync(x => !x.IsCancel, source => source.Include(x => x.OrderItems).ThenInclude(y => y.Product));
+        var orders = await _orderRepository.GetAllAsync(x => x.IsActive,
+            source => source.Include(x => x.OrderItems).ThenInclude(y => y.Product));
         if (orders.Count == 0)
         {
             return ResponseDto<List<OrderDto>>.Fail("Hiç sipariş bulunamadı!", 404);
         }
         var orderDtoList = _mapper.Map<List<OrderDto>>(orders);
         return ResponseDto<List<OrderDto>>.Success(orderDtoList, 200);
-
     }
 
     public async Task<ResponseDto<List<OrderDto>>> GetOrdersAsync(int productId)
     {
         var orders = await _orderRepository.GetAllAsync(
-        x => x.OrderItems.Any(y => y.ProductId == productId && !x.IsCancel),
-        source => source.Include(x => x.OrderItems).ThenInclude(y => y.Product));
+            x => x.OrderItems.Any(y => y.ProductId == productId) && x.IsActive,
+            source => source.Include(x => x.OrderItems).ThenInclude(y => y.Product));
         if (orders.Count == 0)
         {
             return ResponseDto<List<OrderDto>>.Fail("Hiç sipariş bulunamadı!", 404);
@@ -88,64 +95,30 @@ public class OrderService : IOrderService
     public async Task<ResponseDto<List<OrderDto>>> GetOrdersAsync(string userId)
     {
         var orders = await _orderRepository.GetAllAsync(
-        x => x.UserId == userId && !x.IsCancel,
-        source => source.Include(x => x.OrderItems).ThenInclude(y => y.Product));
-
+            x => x.UserId == userId && x.IsActive,
+            source => source.Include(x => x.OrderItems).ThenInclude(y => y.Product));
         if (orders.Count == 0)
         {
             return ResponseDto<List<OrderDto>>.Fail("Hiç sipariş bulunamadı!", 404);
         }
         var orderDtoList = _mapper.Map<List<OrderDto>>(orders);
         return ResponseDto<List<OrderDto>>.Success(orderDtoList, 200);
-
     }
-    public async Task<ResponseDto<List<OrderDto>>> GetCancelledOrdersAsync()
-    {
-        var orders = await _orderRepository.GetAllAsync(x => x.IsCancel,
-            source => source.Include(x => x.OrderItems).ThenInclude(y => y.Product));
 
-        if (orders.Count == 0)
-        {
-            return ResponseDto<List<OrderDto>>.Fail("Hiç iptal edilmiş sipariş bulunamadı!", 404);
-        }
 
-        var orderDtoList = _mapper.Map<List<OrderDto>>(orders);
-        return ResponseDto<List<OrderDto>>.Success(orderDtoList, 200);
-    }
 
     public async Task<ResponseDto<NoContent>> CancelOrder(int id)
     {
-        var order = await _orderRepository.GetAsync(x => x.Id == id,o => o.Include(o => o.OrderItems));
+        var order = await _orderRepository.GetAsync(x => x.Id == id);
         if (order == null)
         {
             return ResponseDto<NoContent>.Fail("Böyle bir sipariş bulunamadı!", 404);
         }
-        if (order.OrderItems == null || !order.OrderItems.Any())
-        {
-            return ResponseDto<NoContent>.Fail("Bu siparişin ürünleri bulunamadı!", 400);
-        }
 
-        var cancelledOrder = new CancelledOrder
-        {
-            Id = order.Id,
-            UserId = order.UserId,
-            FirstName = order.FirstName,
-            LastName = order.LastName,
-            Adress = order.Adress,
-            City = order.City,
-            PhoneNumber = order.PhoneNumber,
-            Email = order.Email,
-            OrderItems = order.OrderItems.Select(item => new CancelledOrderItem
-            {
-                ProductId = item.ProductId,
-                Price = item.Price,
-                Quantity = item.Quantity
-            }).ToList()
-        };
-        order.IsCancel = true;
-        await _cancelledOrderRepository.CreateAsync(cancelledOrder);
-        await _orderRepository.DeleteAsync(order);
+        order.IsActive = false; // Siparişi silmek yerine isActive'i false yapıyoruz
+        await _orderRepository.UpdateAsync(order); // Güncelleme işlemi
         return ResponseDto<NoContent>.Success(200);
     }
-
 }
+
+
