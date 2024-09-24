@@ -35,11 +35,12 @@ public class GeneralMappingProfile : Profile
         CreateMap<CartItem, CartItemUpdateDto>().ReverseMap();
         //Order>>>
         CreateMap<Order, OrderDto>().ReverseMap();
-        CreateMap<Order, OrderCreateDto>().ReverseMap().ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.OrderItems));
-        CreateMap<Order, OrderUpdateDto>().ReverseMap();
- 
+        CreateMap<Order, OrderCreateDto>().ReverseMap();
+
         //OrderItem>>>
-        CreateMap<OrderItem, OrderItemDto>().ReverseMap().ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product)); 
+        CreateMap<OrderItem, OrderItemDto>().ReverseMap().ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product));
+        CreateMap<Order, InOrderItemOrderDto>().ReverseMap();
+        CreateMap<OrderItem, OrderItemCreateDto>().ReverseMap();
 
 
 
@@ -47,7 +48,6 @@ public class GeneralMappingProfile : Profile
 
 
 
-      
     }
 
 

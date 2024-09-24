@@ -34,47 +34,18 @@ public class OrderService : IOrderService
     {
         if (orderCreateDto == null)
         {
-            return ResponseDto<NoContent>.Fail("Geçersiz sipariş verisi!", 400);
+            return ResponseDto<NoContent>.Fail("Bir hata oluştu", 400);
         }
-        var order = new Order
+        var order = _mapper.Map<Order>(orderCreateDto);
+        var orderResult = await _orderRepository.CreateAsync(order);
+        if (orderResult == null)
         {
-            UserId = orderCreateDto.UserId,
-            FirstName = orderCreateDto.FirstName,
-            LastName = orderCreateDto.LastName,
-            Adress = orderCreateDto.Address,
-            City = orderCreateDto.City,
-            PhoneNumber = orderCreateDto.PhoneNumber,
-            Email = orderCreateDto.Email,
-            PaymentType = (PaymentType)orderCreateDto.PaymentType,
-            OrderDate = DateTime.Now,
-            OrderItems = new List<OrderItem>()
-        };
-
-        List<int> invalidProductIds = new List<int>();
-
-        foreach (var item in orderCreateDto.OrderItems)
-        {
-            var product = await _productRepository.GetAsync(x => x.Id == item.ProductId);
-            if (product == null)
-            {
-                invalidProductIds.Add(item.ProductId);
-            }
-            var orderItem = new OrderItem
-            {
-                ProductId = item.ProductId,
-                Quantity = item.Quantity,
-                Price = product.Price
-            };
-
-            order.OrderItems.Add(orderItem);
+            return ResponseDto<NoContent>.Fail("Bir hata oluştu!", 500);
         }
-
-        if (invalidProductIds.Any())
+        if (order.OrderItems == null || !order.OrderItems.Any())
         {
-            return ResponseDto<NoContent>.Fail($"Bazı ürünler bulunamadı: {string.Join(", ", invalidProductIds)}", 404);
+            return ResponseDto<NoContent>.Fail("Order items kayıp", 400);
         }
-        await _orderRepository.CreateAsync(order);
-
         return ResponseDto<NoContent>.Success(201);
     }
 
@@ -144,12 +115,16 @@ public class OrderService : IOrderService
 
     public async Task<ResponseDto<NoContent>> CancelOrder(int id)
     {
-        var order = await _orderRepository.GetAsync(x => x.Id == id);
+        var order = await _orderRepository.GetAsync(x => x.Id == id,o => o.Include(o => o.OrderItems));
         if (order == null)
         {
             return ResponseDto<NoContent>.Fail("Böyle bir sipariş bulunamadı!", 404);
         }
-        order.IsCancel = true;
+        if (order.OrderItems == null || !order.OrderItems.Any())
+        {
+            return ResponseDto<NoContent>.Fail("Bu siparişin ürünleri bulunamadı!", 400);
+        }
+
         var cancelledOrder = new CancelledOrder
         {
             Id = order.Id,
@@ -167,7 +142,7 @@ public class OrderService : IOrderService
                 Quantity = item.Quantity
             }).ToList()
         };
-
+        order.IsCancel = true;
         await _cancelledOrderRepository.CreateAsync(cancelledOrder);
         await _orderRepository.DeleteAsync(order);
         return ResponseDto<NoContent>.Success(200);
