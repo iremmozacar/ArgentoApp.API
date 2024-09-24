@@ -1,7 +1,10 @@
 using ArgentoApp.Business.Abstract;
+using ArgentoApp.Shared.ComplexTypes;
 using ArgentoApp.Shared.DTOs.OrderDTOs;
 using ArgentoApp.Shared.Helpers;
 using Microsoft.AspNetCore.Http;
+
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace ArgentoApp.API.Controllers
@@ -25,7 +28,8 @@ namespace ArgentoApp.API.Controllers
             return CreateActionResult(response);
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById (int id){
+        public async Task<IActionResult> GetById(int id)
+        {
             var response = await _orderservice.GetOrderAsync(id);
             return CreateActionResult(response);
         }
@@ -38,7 +42,7 @@ namespace ArgentoApp.API.Controllers
         [HttpGet("{userId}")]
         public async Task<IActionResult> GetOrdersByUserId(string userId)
         {
-            var response = await _orderservice.GetOrdersAsync( userId);
+            var response = await _orderservice.GetOrdersAsync(userId);
             return CreateActionResult(response);
         }
         [HttpGet("{productId}")]
@@ -48,9 +52,16 @@ namespace ArgentoApp.API.Controllers
             return CreateActionResult(response);
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> CancelOrder(int id){
-         var response = await _orderservice.CancelOrder(id);
-         return CreateActionResult(response);
+        public async Task<IActionResult> CancelOrder(int id)
+        {
+            var response = await _orderservice.CancelOrder(id);
+            return CreateActionResult(response);
+        }
+        [HttpPut]
+        public async Task<IActionResult> ChangeStatus(int id, OrderState orderState)
+        {
+            var response = await _orderservice.ChangeOrderStatusAsync(id, orderState);
+            return CreateActionResult(response);
         }
 
     }

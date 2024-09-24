@@ -115,8 +115,8 @@ public class OrderService : IOrderService
             return ResponseDto<NoContent>.Fail("Böyle bir sipariş bulunamadı!", 404);
         }
 
-        order.IsActive = false; // Siparişi silmek yerine isActive'i false yapıyoruz
-        await _orderRepository.UpdateAsync(order); // Güncelleme işlemi
+        order.IsActive = false; 
+        await _orderRepository.UpdateAsync(order); 
         return ResponseDto<NoContent>.Success(200);
     }
 }

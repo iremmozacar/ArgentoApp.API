@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArgentoApp.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9f7bf5da0faed1224e3778bbfdf60b5155d982c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01ff354c412472a0f66fcbe630fb20838216be10")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArgentoApp.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArgentoApp.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
